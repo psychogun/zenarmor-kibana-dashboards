@@ -1,3 +1,4 @@
+![zenanaboards](zenarmor-kibana-dashboards.png "zenanaboards")
 # Zenarmor Kibana Dashboards
 
 Here are dashboards for Kibana from the Elastic Stack, which you can use to visualize the different outputs from the Zenarmor (Sensei) plugin in OPNsense, through an external Elasticsearch database. 
