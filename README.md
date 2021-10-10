@@ -44,6 +44,9 @@ Create Index patterns in Kibana (Stack Management > Kibana > Index Patterns > "C
 
 Import the dashboards through Kibana (Stack Management > Kibana > Saved Objects > "Import")
 
+- dashboards/zenarmor-dashboard-overview-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-tls-7.15.0.ndjson
+
 ### Changelog
 
 View the [changelog](/CHANGELOG.md) for the latest updates and changes by
