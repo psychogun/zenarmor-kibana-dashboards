@@ -47,6 +47,7 @@ Import the dashboards through Kibana (Stack Management > Kibana > Saved Objects 
 - dashboards/zenarmor-dashboard-blocks-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-connections-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-dns-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-threats-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-tls-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-web-7.15.0.ndjson
 
