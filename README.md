@@ -44,13 +44,15 @@ Create Index patterns in Kibana (Stack Management > Kibana > Index Patterns > "C
 
 Import the dashboards through Kibana (Stack Management > Kibana > Saved Objects > "Import")
 
-- dashboards/zenarmor-dashboard-overview-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-blocks-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-connections-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-dns-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-tls-7.15.0.ndjson
+- dashboards/zenarmor-dashboard-web-7.15.0.ndjson
 
 ### Changelog
 
-View the [changelog](/CHANGELOG.md) for the latest updates and changes by
-version.
+Trying to just smooth things over as I work with this.
 
 ## How to use it:
 
@@ -58,7 +60,7 @@ Analytics > Dashboard
 
 ## Documentation
 
-For documentation and a more thorough installation guide, see 
+For documentation and a more thorough installation guide (manual installation on Ubuntu), see (coming soon)
 
 
 ## Contributing
