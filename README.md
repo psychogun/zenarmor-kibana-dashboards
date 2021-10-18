@@ -19,28 +19,63 @@ Elastic Stack:
 
 ## Installation:
 ### Configure Elasticsearch
-Create a user with Role permissions to create Indicies in Elasticsearch. 
+Create a user with Role permissions to create Indicies in Elasticsearch. You can do this through Kibana.
 
-The Zenarmor (Sensei) plugin in OPNsense creates these indicies in elasticsearch:
-- alert
-- conn
-- dns
-- http
-- sip
-- tls
+#### Role
+Role name:
+- zenarmor_write
+
+Cluster privileges:
+- manage_index_templates
+- manage_ilm
+- monitor
+
+Under Index privileges add Indicies as custom option:
+- alert*
+- conn*
+- dns*
+- http*
+- sip*
+- tls*
+
+With these Privileges: 
+- all
+
+
+*- write*
+*- delete*
+*- manage*
+*- manage_ilm*
+*- create_index*
+*- auto_configure*
+
+
+#### User
+Add a user with the role `zenarmor_write`. Note the password, you will use it in OPNsense. 
+
+#### elasticsearch.yml
+Remember to change `network.host` in `elasticsearch.yml` to an appropriate value to allow external connections. 
 
 ### Configure Zenarmor (Sensei)
-Configure Zenarmor (Sensei) in OPNsense to use an external database (elasticsearch). If you have Zenarmor (Sensei) already installed, uninstall and install again to be able to select an external database.
+Configure Zenarmor (Sensei) in OPNsense to use an external database (elasticsearch). If you have Zenarmor (Sensei) already installed, uninstall and install again to be able to select an external database. 
+
+A check to see if everything is working OK is to see if you are able to view any Reports or click on any Dashboards from OPNsense, since it will then grab data from Elasticsearch. Another thing to look for is to look after indicies through Kibana, which will have been created from the Zenarmor plugin. The indicies will look like something like this: 
+
+- alert-211018
+- conn-211017
+
+etc. .
 
 ### Configure Kibana
-
-Create Index patterns in Kibana (Stack Management > Kibana > Index Patterns > "Create index pattern"):
+Create Index patterns in Kibana (Stack Management > Kibana > Index Patterns > "Create index pattern") and match it:
 - alert-*
 - conn-*
 - dns-*
 - http-*
 - sip-*
 - tls-*
+
+Use `start_time` as Timestamp field. Select Create index pattern. 
 
 Import the dashboards through Kibana (Stack Management > Kibana > Saved Objects > "Import")
 
@@ -50,6 +85,9 @@ Import the dashboards through Kibana (Stack Management > Kibana > Saved Objects 
 - dashboards/zenarmor-dashboard-threats-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-tls-7.15.0.ndjson
 - dashboards/zenarmor-dashboard-web-7.15.0.ndjson
+
+After each consequent import, you'll notice you have some overwrites - but that is only the tags beiing overwritten.
+After some time, your dashboards will start working. 
 
 ### Changelog
 
