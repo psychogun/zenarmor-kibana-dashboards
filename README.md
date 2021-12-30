@@ -1,7 +1,7 @@
 ![zenanaboards](zenarmor-kibana-dashboards.png "zenanaboards")
 # Zenarmor Kibana Dashboards
 
-Here are dashboards for Kibana from the Elastic Stack, which you can use to visualize the different outputs from the Zenarmor (Sensei) plugin in OPNsense, through an external Elasticsearch database. 
+Here are dashboards for Kibana from the Elastic Stack, which you can use to visualize the different outputs from the Zenarmor (Sensei) plugin in OPNsense, through an external Elasticsearch database. This greatly leveraged CPU usage on my OPNsense firewall, although I do have to buy some more RAM because the swap usage is through the roof. 
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Elastic Stack:
 
 ## Installation:
 ### Configure Elasticsearch
-Create a user with Role permissions to create Indicies in Elasticsearch. You can do this through Kibana.
+Create a user with Role permissions to create Indicies in Elasticsearch. You can do this through Kibana. 
 
 #### Role
 Role name:
@@ -40,7 +40,6 @@ Under Index privileges add Indicies as custom option:
 
 With these Privileges: 
 - all
-
 
 *- write*
 *- delete*
@@ -99,7 +98,7 @@ Analytics > Dashboard
 
 ## Documentation
 
-For documentation and a more thorough installation guide (manual installation on Ubuntu), see (coming soon)
+For documentation and a more thorough installation guide (manual installation on Ubuntu), see (coming soon - I hope).
 
 
 ## Contributing
@@ -107,3 +106,7 @@ For documentation and a more thorough installation guide (manual installation on
 There are many ways to contribute:
 - Fix and [report bugs]
 - Improve documentation
+
+## Disclaimer
+
+While I try to keep the information timely and accurate, I make no guarantees. I will make an effort to correct errors brought to my attention. Probably there are some logical errors already in the dashboards. 
